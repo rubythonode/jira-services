@@ -1,18 +1,21 @@
 {
-	"name": "jira-callbacks",
-	"description": "Useful JIRA callbacks",
-	"version": "0.0.1",
-	"private": false,
-	"author": "https://github.com/srstanic",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/srstanic/jira-callbacks"
-	},
-	"engines": {
-		"node": ">=0.10.28",
-		"npm": ">=1.4.28"
-	},
-	"dependencies": {
-		"jira": "0.9.2"
-	}
+    "name": "jira-callbacks",
+    "description": "Useful JIRA callbacks",
+    "version": "0.0.1",
+    "private": false,
+    "author": "https://github.com/srstanic",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/srstanic/jira-callbacks"
+    },
+    "engines": {
+        "node": ">=0.10.28",
+        "npm": ">=1.4.28"
+    },
+    "dependencies": {
+        "jira": "0.9.2"
+    },
+    "scripts": {
+        "start": "node main.js"
+    }
 }
