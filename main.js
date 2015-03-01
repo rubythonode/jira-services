@@ -12,10 +12,10 @@ var requestListener = function (req, res) {
         req.on('end', function () {
             console.log("event: " + jiraEvent);
             jep.process(JSON.parse(jiraEvent));
-        });
 
-        res.writeHead(200);
-        res.end('Got it!\n');
+            res.writeHead(200);
+            res.end('Got it!\n');
+        });
 
     },
     port = process.env.PORT || 8080,
