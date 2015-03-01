@@ -47,6 +47,9 @@ local.properties
 data/
 mongod
 
+# Heroku
+.env
+
 # General
 # =======
 *.log
