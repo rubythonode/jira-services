@@ -1,10 +1,25 @@
 http = require('http');
-jira = require('jira')
+jep = require('./jira-event-processor');
 
 var requestListener = function (req, res) {
-  res.writeHead(200);
-  res.end('Hello, World!\n');
-}
-var port = process.env.PORT || 8080;
+        var jiraEvent = "",
+            jiraIssue,
+            jiraIssueUpdate;
+
+        req.on('data', function (chunk) {
+            jiraEvent += chunk;
+        });
+        req.on('end', function () {
+            console.log("event: " + jiraEvent);
+            jep.process(JSON.parse(jiraEvent));
+        });
+
+        res.writeHead(200);
+        res.end('Got it!\n');
+
+    },
+    port = process.env.PORT || 8080,
+    server = http.createServer(requestListener);
+
 console.log(port);
-var server = http.createServer(requestListener).listen(port);
+server.listen(port);
