@@ -1,12 +1,12 @@
 {
-    "name": "jira-callbacks",
-    "description": "Useful JIRA callbacks",
+    "name": "jira-services",
+    "description": "Useful JIRA services",
     "version": "0.0.1",
     "private": false,
     "author": "https://github.com/srstanic",
     "repository": {
         "type": "git",
-        "url": "https://github.com/srstanic/jira-callbacks"
+        "url": "https://github.com/srstanic/jira-services"
     },
     "engines": {
         "node": ">=0.10.28",
